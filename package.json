@@ -18,19 +18,19 @@
     "health": "node scripts/healthcheck.mjs"
   },
   "dependencies": {
-    "@hocuspocus/extension-database": "^4.1.0",
-    "@hocuspocus/extension-logger": "^4.2.0",
-    "@hocuspocus/extension-redis": "^4.2.0",
-    "@hocuspocus/extension-s3": "^4.1.0",
-    "@hocuspocus/server": "^4.2.0",
-    "commander": "^14.0.0",
-    "dotenv": "^17.0.0",
-    "pg": "^8.16.0"
+    "@hocuspocus/extension-database": "4.3.0",
+    "@hocuspocus/extension-logger": "4.3.0",
+    "@hocuspocus/extension-redis": "4.3.0",
+    "@hocuspocus/extension-s3": "4.3.0",
+    "@hocuspocus/server": "4.3.0",
+    "commander": "14.0.3",
+    "dotenv": "17.4.2",
+    "pg": "8.22.0"
   },
   "devDependencies": {
-    "@types/node": "^22.15.0",
-    "@types/pg": "^8.15.0",
-    "tsx": "^4.20.0",
-    "typescript": "^5.8.0"
+    "@types/node": "22.20.0",
+    "@types/pg": "8.20.0",
+    "tsx": "4.22.4",
+    "typescript": "5.9.3"
   }
 }
