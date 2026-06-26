@@ -12,10 +12,10 @@ export interface CollaborationContext {
 interface AuthenticatePayload {
   documentName: string
   token: string
-  providerVersion?: string
+  providerVersion?: string | null
   requestHeaders: Headers
   requestParameters: URLSearchParams
-  connection: {
+  connectionConfig: {
     readOnly: boolean
   }
 }
@@ -87,7 +87,7 @@ export async function authenticate(data: AuthenticatePayload, env: AppEnv): Prom
 
     const payload = await response.json().catch(() => ({} as Record<string, unknown>))
     const readOnly = Boolean(payload.readOnly)
-    data.connection.readOnly = readOnly
+    data.connectionConfig.readOnly = readOnly
 
     return {
       userId: String(payload.userId || payload.sub || 'webhook-user'),
